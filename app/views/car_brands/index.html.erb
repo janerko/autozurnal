@@ -2,7 +2,7 @@
 
 <p><%= link_to "Pridaj novu znacku", new_car_brand_path %></p>
 
-<table class="table">
+<table class="table" border="1">
   <thead>
     <tr>
       <th>logo</th>
@@ -16,7 +16,7 @@
       
       <% @car_brands.each do |car_brand| %>
       <tr>
-      <td></td>
+      <td><%= image_tag car_brand.logo.url, style: 'width: 64px' %></td>
         <td>
           <%= car_brand.name %>
         </td> 

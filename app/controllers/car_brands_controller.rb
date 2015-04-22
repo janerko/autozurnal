@@ -23,7 +23,7 @@ class CarBrandsController < ApplicationController
   end
 
   def update
-    if @car_brand.updatea car_brand_params
+    if @car_brand.update car_brand_params
       redirect_to car_brands_url
     else
       render :edit
