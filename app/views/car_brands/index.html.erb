@@ -1,0 +1,33 @@
+<h1>Znacky</h1>
+
+<p><%= link_to "Pridaj novu znacku", new_car_brand_path %></p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>logo</th>
+      <th>nazov</th>
+      <th>Akcie</th>
+    </tr>
+  </thead>
+
+  <tbody>
+   
+      
+      <% @car_brands.each do |car_brand| %>
+      <tr>
+      <td></td>
+        <td>
+          <%= car_brand.name %>
+        </td> 
+        <td><%= link_to "Upravit", edit_car_brand_path(car_brand) %>
+            <%= link_to "Odstranit", car_brand_path(car_brand), method: 'delete', data: { confirm: 'Ste si isty?'} %>
+        </td>
+
+      </tr>
+      <% end %> 
+
+    
+  </tbody>
+</table>
+
